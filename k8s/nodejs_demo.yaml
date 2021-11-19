@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nodejs-app
+  name: nodejs-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-app
+  template:
+    metadata:
+      labels:
+        app: nodejs-app
+    spec:
+      containers:
+        - name: status
+          image: 921312901458.dkr.ecr.ap-southeast-2.amazonaws.com/nodejs:latest
+          ports:
+            - containerPort: 8080
