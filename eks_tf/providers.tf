@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 0.12"
   backend "s3" {
     region   = "ap-southeast-2"
-    bucket   = "tom.niu23.backend"
+    bucket   = "tom.niu25.eks"
     key      = "eks_demo/terraform.tfstate"
   }
 }
