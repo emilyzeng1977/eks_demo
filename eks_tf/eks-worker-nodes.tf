@@ -45,7 +45,7 @@ resource "aws_eks_node_group" "demo" {
   subnet_ids      = aws_subnet.demo[*].id
   instance_types  = ["t2.small"]
   remote_access {
-    ec2_ssh_key     = "key_tom23"
+    ec2_ssh_key     = "key_tom25"
   }
 
   scaling_config {
